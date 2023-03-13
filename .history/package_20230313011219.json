@@ -1,0 +1,33 @@
+{
+  "name": "pedropiedrarota",
+  "version": "1.0.0",
+  "description": "Pagina web de mi amigo Pedro Civera Sanchez",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss: build/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/araque1990/PedroPiedraRota.git"
+  },
+  "keywords": [
+    "Pedro",
+    "Piedra",
+    "Rota",
+    "Rock",
+    "Zaragoza",
+    "En",
+    "vivo",
+    "Sitio",
+    "Web",
+    "Oficial"
+  ],
+  "author": "Cristian Araque",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/araque1990/PedroPiedraRota/issues"
+  },
+  "devDependencies": {
+    "sass": "^1.59.2"
+  }
+}

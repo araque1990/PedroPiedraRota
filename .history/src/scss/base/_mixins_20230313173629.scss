@@ -1,0 +1,12 @@
+@use 'variables' as v;
+
+@mixin heading($color: purple, $border-radius: false) {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  color: $color;
+  letter-spacing: 1px;
+
+  @if $border-radius {
+    border-radius: 1rem;
+  }
+}

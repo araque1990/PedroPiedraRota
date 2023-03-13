@@ -1,0 +1,6 @@
+@forward 'contenido';
+@forward '../base/variables';
+
+body {
+  background-color: $primario;
+}

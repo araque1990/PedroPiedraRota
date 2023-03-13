@@ -7,13 +7,8 @@
   h1 { 
     color: v.$blanco;
     text-align: center;
-    @include m.tablet {
-      margin: 0;
-    }
   }
-
   .contenido-header {
-    padding: 2rem;
     @include m.tablet {
       display: flex;
       justify-content: space-between;
@@ -25,7 +20,6 @@
   @include m.tablet {
     display: flex;
     gap: 2rem;
-    align-items: center;
   }
   a {
     display: block;
@@ -33,9 +27,6 @@
     color: v.$blanco;
     font-size: 2.4rem;
     margin-bottom: 1rem;
-    @include m.tablet {
-      margin: 0;
-    }
 
     &:hover {
       color: v.$amarillo;

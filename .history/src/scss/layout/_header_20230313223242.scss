@@ -7,11 +7,8 @@
   h1 { 
     color: v.$blanco;
     text-align: center;
-    @include m.tablet {
-      margin: 0;
-    }
+    margin: 0;
   }
-
   .contenido-header {
     padding: 2rem;
     @include m.tablet {

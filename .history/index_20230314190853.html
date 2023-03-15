@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Piedra Rota</title>
+  <meta
+   name="description"
+   content="Rock Zaragoza, Pedro Piedra Rota, Sitio Web Oficial, cantautor Zaragoza"
+  />
+  <meta
+   name="keywords"
+   content="Rock Zaragoza, pagina oficial de Pedro Civera Sanchez, Pedro Piedra Rota, cantautor Zaragoza"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+   href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap"
+   rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ewert&display=swap" rel="stylesheet"> 
+  <link rel="shortcut icon" href="src/img/icono/Guitarra.svg" type="image/svg" />
+  <link rel="stylesheet" href="build/css/app.css" />
+ </head>
+
+ <body>
+  <header class="header">
+   <div class="contendor contenido-header">
+    <picture>
+      <source srcset="build/img/logo/logo_pedro.avif" type="image/avif">
+      <source srcset="build/img/logo/logo_pedro.webp" type="image/webp">
+      <img loading="lazy" width="200" height="300" src="build/img/logo/logo_pedro.png" alt="imagen piedra rota">
+    </picture>
+    <nav class="navegacion-principal">
+     <a href="#">Proximos Eventos</a>
+     <a href="#">Galería</a>
+     <a href="#">Entradas</a>
+    </nav>
+   </div>
+  </header>
+  <div class="video">
+    <div class="overlay">
+        <div class="contenedor contenido-video">
+            <picture>
+              <source srcset=".avif" type="image/avif">
+              <source srcset=".webp" type="image/webp">
+              <img loading="lazy" width="200" height="300" src="" alt="">
+            </picture>
+            <p>2023, Zaragoza, España</p>
+        </div>
+    </div>
+    <video autoplay muted loop>
+        <source src="src/video/videoartista.mp4" type="video/mp4">
+        <source src="src/video/videoartista.ogg" type="video/ogg">
+        <source src="src/video/videoartista.webm" type="video/webm">
+      </video>
+  </div>
+
+  <section class="contenedor sobre-festival">
+    <div class="imagen">
+      <picture>
+        <source srcset="build/img/pedro_vocalista.avif" type="image/avif">
+        <source srcset="build/img/pedro_vocalista.webp" type="image/webp">
+        <img loading="lazy" width="200" height="300" src="build/img/pedro_vocalista.jpg" alt="imagen vocalista">
+      </picture>
+    </div>
+    <div class="contenido-festival">
+            <h2>Show de Piedra Rota</h2>
+            <p class="fecha">No lo arregla ni la resina epoxi</p>
+            <p>Piedra Rota es un músico experimentado que lleva desde muy pequeño haciendo música y siendo muy estomagante a la vez, sin filtro alguno, este personaje te lleva a experimentar todo tipo de sentimientos en un único espectáculo, desde vergüenza ajena a sentimientos de llanto por emociones encontradas de saber que tu vida es más significativa desde que lo ves en directo. Si te gusta el humor Negro, la sátira, comedia en general (donde no queda títere con cabeza) y la música en general, este es tu show. Se comenta que le gusta pagar facturas y comer, así que si estás dispuesto a contratar o ver a este tipo, no tengas miedo que a priori no muerde…</p>
+    </div>
+  </section>
+
+  <section class="lineup">
+    <h3>Actuaciones</h3>
+    <p class="dia">Martes 14</p>
+    <div class="escenarios-contenedor contenedor">
+      <div class="escenario rock bg-amarillo">
+        <p class="nombre-escenario">Últimos Hits</p>
+        <ul class="calendario">
+          <li>hora | <span>Lugar</span></li>
+          <li>hora | <span>Lugar</span></li>
+          <li>hora | <span>Lugar</span></li>
+          <li>hora | <span>Lugar</span></li>
+        </ul>
+      </div> <!--.escenario-->
+
+      <div class="escenario show bg-verde">
+        <p class="nombre-escenario">Proximos Shows de Piedra Rota</p>
+        <ul class="calendario">
+          <li>hora | <span>Lugar</span></li>
+          <li>hora | <span>Lugar</span></li>
+          <li>hora | <span>Lugar</span></li>
+          <li>hora | <span>Lugar</span></li>
+        </ul>
+      </div> <!--.escenario-->
+    </div> <!--.escenarios-contenedor-->
+
+    <p class="dia">Miercoles 15</p>
+    <div class="escenarios-contenedor contenedor">
+      <div class="escenario rock bg-verde">
+        <p class="nombre-escenario">Anteriores Actuaciones de Rock</p>
+        <ul class="calendario">
+          <li>hora | <span>Lugar</span></li>
+          <li>hora | <span>Lugar</span></li>
+          <li>hora | <span>Lugar</span></li>
+          <li>hora | <span>Lugar</span></li>
+        </ul>
+      </div> <!--.escenario-->
+
+      <div class="escenario show bg-amarillo">
+        <p class="nombre-escenario">Anteriores Shows de Piedra Rota</p>
+        <ul class="calendario">
+          <li>hora | <span>Lugar</span></li>
+          <li>hora | <span>Lugar</span></li>
+          <li>hora | <span>Lugar</span></li>
+          <li>hora | <span>Lugar</span></li>
+        </ul>
+      </div> <!--.escenario-->
+    </div> <!--.escenarios-contenedor-->
+  </section>
+
+  <section class="galeria contenedor">
+    <h3>Galeria</h3>
+    <ul class="galeria-imagenes"></ul>
+  </section>
+
+  <script src="build/js/galeria.js"></script>
+ </body>
+</html>

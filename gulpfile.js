@@ -29,6 +29,7 @@ function imagenes(callback) {
   callback();
 }
 
+
 function versionWebp(callback) {
   const opciones = {
     quality: 50
@@ -56,10 +57,32 @@ function javascript(callback) {
   callback();
 }
 
+function video(callback) {
+  src("src/video/**/*.{mp4,ogg,webm}")
+  .pipe(dest("build/video"));
+  
+  callback();
+}
+
+function svg(callback) {
+  src("src/img/**/*.svg")
+  .pipe(dest("build/img"));
+  
+  callback();
+}
+
+function audio(callback) {
+  src("src/audio/**/*.{mp3,ogg}")
+  .pipe(dest("build/audio"));
+  
+  callback();
+}
 
 function dev(callback) {
   watch("src/scss/**/*.scss", css);
   watch("src/js/**/*.js", javascript);
+  watch("src/video/**/*.{mp4,ogg,webm}", video);
+  watch("src/audio/**/*.{mp3,ogg}", audio);
   callback();
 }
 
@@ -68,4 +91,4 @@ exports.js = javascript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel(imagenes,versionWebp,versionAvif,javascript,dev);
+exports.dev = parallel(imagenes,svg,versionWebp,versionAvif,javascript,video,audio,dev);

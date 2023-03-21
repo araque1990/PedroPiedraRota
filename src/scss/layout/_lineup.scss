@@ -5,7 +5,6 @@
   background-color: v.$verdeazul;
   padding: 5rem 0;
 
-  h3,
   p {
     text-align: center;
     color: v.$dorado;
@@ -23,10 +22,10 @@
 
 .escenario {
   padding-top: 2rem;
-  background-color: v.$morado;
+  background-color: v.$azul;
 
   li:nth-child(odd) {
-    background-color: darken(v.$morado, 15%);
+    background-color: darken(v.$azul, 15%);
   }
 }
 
@@ -72,4 +71,12 @@
       font-weight: 400;
     }
   }
+}
+
+audio {
+  padding-top: 2rem;
+}
+
+span {
+  display: block;
 }

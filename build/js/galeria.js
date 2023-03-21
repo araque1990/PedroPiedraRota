@@ -4,6 +4,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function iniciarGaleria() {
   crearGaleria();
+  scrollNav();
+}
+
+function scrollNav() {
+  const enlaces = document.querySelectorAll(".navegacion-principal a");
+  enlaces.forEach(enlace => {
+    enlace.addEventListener("click", function(e) {
+      const seccionScroll = e.target.attributes.href.value;
+      const seccion = document.querySelector(seccionScroll);
+      seccion.scrollIntoView();
+    })
+  });
 }
 
 function crearGaleria() {
@@ -37,8 +49,7 @@ function mostrarImagen(id) {
   overlay.classList.add("overlay");
   overlay.onclick = function() {
     const body = document.querySelector("body");
-    body.classList.remove("fijar-body");
-    overlay.remove();
+
   }
 
   // Boton para cerrar el Modal
@@ -58,4 +69,3 @@ function mostrarImagen(id) {
   body.appendChild(overlay);
   body.classList.add("fijar-body");
 }
-

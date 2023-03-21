@@ -320,6 +320,12 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
 }
+@media (min-width: 992px) {
+  body {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
 body.fijar-body {
   overflow: hidden;
 }
@@ -354,6 +360,9 @@ h2 {
 
 h3 {
   font-size: 3rem;
+  text-align: center;
+  color: #634e0b;
+  font-family: "Ewert", cursive;
 }
 
 img {
@@ -379,6 +388,12 @@ hr {
 }
 .header picture img {
   border-radius: 50%;
+  padding-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .header picture img {
+    padding-bottom: 0;
+  }
 }
 @media (min-width: 768px) {
   .header picture {
@@ -408,7 +423,7 @@ hr {
   display: block;
   text-align: center;
   color: #634e0b;
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
@@ -441,7 +456,7 @@ hr {
   width: auto;
   display: block;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .video video {
     width: 100%;
   }
@@ -449,14 +464,16 @@ hr {
 
 .contenido-video {
   text-align: center;
+  z-index: 2;
 }
 .contenido-video h2 {
   color: #fff;
   font-size: 7rem;
   margin: 0;
+  justify-content: center;
 }
 .contenido-video p {
-  background-color: rgb(206, 65, 101);
+  background-color: #6a8caf;
   display: inline-block;
   padding: 1rem 2rem;
   color: #fff;
@@ -492,7 +509,7 @@ hr {
   margin-bottom: 2rem;
 }
 .contenido-festival .fecha {
-  color: rgb(206, 65, 101);
+  color: #634e0b;
   font-weight: 700;
 }
 
@@ -508,7 +525,6 @@ hr {
   background-color: #60f3d3;
   padding: 5rem 0;
 }
-.lineup h3,
 .lineup p {
   text-align: center;
   color: #634e0b;
@@ -524,10 +540,10 @@ hr {
 
 .escenario {
   padding-top: 2rem;
-  background-color: #794a91;
+  background-color: #6a8caf;
 }
 .escenario li:nth-child(odd) {
-  background-color: #4f305e;
+  background-color: #476685;
 }
 
 @media (min-width: 768px) {
@@ -574,11 +590,16 @@ hr {
   font-weight: 400;
 }
 
+audio {
+  padding-top: 2rem;
+}
+
+span {
+  display: block;
+}
+
 .galeria {
   padding: 5rem 0;
-}
-.galeria h3 {
-  text-align: center;
 }
 
 .galeria-imagenes {
@@ -626,6 +647,7 @@ hr {
 .overlay picture {
   display: block;
   max-width: 80rem;
+  position: relative;
 }
 
 .boton-cerrar {
@@ -637,7 +659,107 @@ hr {
   display: grid;
   place-items: center;
   font-weight: 700;
+  position: absolute;
+  top: 80%;
 }
 .boton-cerrar:hover {
+  cursor: pointer;
+}
+
+.formulario {
+  width: 100%;
+  background-color: #60f3d3;
+  padding: 5rem 0;
+}
+.formulario fieldset {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr 1fr);
+  gap: 2rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
+  border: none;
+  font-size: 1.8rem;
+}
+@media (min-width: 1200px) {
+  .formulario fieldset {
+    max-width: 70%;
+  }
+}
+.formulario fieldset legend {
+  text-align: center;
+  margin-left: 0;
+  font-weight: 700;
+}
+.formulario fieldset label {
+  grid-column-start: 1;
+}
+.formulario fieldset input {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  border-radius: 0.5rem;
+  border: none;
+  border-bottom: 0.1rem solid #42bbb3;
+  height: 3rem;
+}
+.formulario fieldset .nombre {
+  margin-top: 2rem;
+}
+.formulario fieldset button {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  width: 10rem;
+  height: 3rem;
+  border-color: #634e0b;
+  border-radius: 1rem;
+  font-weight: 700;
+}
+.formulario fieldset button:hover {
+  background-color: #634e0b;
+  color: #fff;
+  cursor: pointer;
+}
+
+.site-footer {
+  background-color: #6a8caf;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+.site-footer p, .site-footer a {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #fff;
+}
+.site-footer a {
+  text-decoration: underline;
+}
+.site-footer .site-footer--Piedra {
+  padding-left: 5%;
+}
+@media (min-width: 768px) {
+  .site-footer .site-footer--Piedra {
+    padding-left: 10%;
+    margin-left: 5% rem;
+  }
+}
+
+.contenedor-redes-sociales {
+  display: block;
+}
+.contenedor-redes-sociales p {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.contenedor-redes-sociales .imagenes--redes-sociales {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.contenedor-redes-sociales .imagenes--redes-sociales img {
+  width: 5rem;
+  margin-bottom: 2rem;
   cursor: pointer;
 }

@@ -1,4 +1,5 @@
 @use 'variables' as v;
+@use '../base/mixins' as m;
 
 html {
   font-size: 62.5%;
@@ -11,6 +12,10 @@ html {
 body {
   font-family: v.$fuente_principal;
   font-size: 1.6rem;
+  @include m.desktop {
+    width: 90%;
+    margin-left: 5%;
+  }
 
   &.fijar-body {
     overflow: hidden;
@@ -47,6 +52,9 @@ h2 {
 
 h3 {
   font-size: 3rem;
+  text-align: center;
+    color: v.$dorado;
+    font-family: v.$fuente_secundaria;
 }
 
 img {

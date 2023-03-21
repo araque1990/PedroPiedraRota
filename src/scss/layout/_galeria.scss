@@ -3,9 +3,6 @@
 
 .galeria {
   padding: 5rem 0;
-  h3 {
-    text-align: center;
-  }
 }
 
 .galeria-imagenes {
@@ -39,6 +36,7 @@
   picture {
     display: block;
     max-width: 80rem;
+    position: relative;
   }
 }
 
@@ -51,8 +49,10 @@
   display: grid;
   place-items: center;
   font-weight: 700;
+  position: absolute;
+  top: 80%;
 
   &:hover {
     cursor: pointer;
   }
-}
+} 

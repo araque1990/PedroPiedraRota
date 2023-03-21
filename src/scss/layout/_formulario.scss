@@ -1,0 +1,60 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.formulario {
+  width: 100%;
+  background-color: v.$verdeazul;
+  padding: 5rem 0;
+  fieldset {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr 1fr);
+    gap: 2rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    border: none;
+    font-size: 1.8rem;
+  
+    @include m.desktopXL {
+      max-width: 70%;
+    }
+    
+    legend {
+      text-align: center;
+      margin-left: 0;
+      font-weight: 700;
+    }
+    
+    label {
+      grid-column-start: 1;
+    }
+    
+    input {
+      grid-column-start: 2;
+      grid-column-end: 5;
+      border-radius: .5rem;
+      border: none;
+      border-bottom: .1rem solid v.$verde;
+      height: 3rem;
+    }
+
+    .nombre {
+      margin-top: 2rem;
+    }
+
+    button {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      width: 10rem;
+      height: 3rem;
+      border-color: v.$dorado;
+      border-radius: 1rem;
+      font-weight: 700;
+      &:hover {
+        background-color: v.$dorado;
+        color: v.$blanco;
+        cursor: pointer;
+      }
+    }
+  }
+  
+}

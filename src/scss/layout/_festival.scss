@@ -21,10 +21,12 @@
     font-family: v.$fuente_secundaria;
     margin-bottom: 2rem;
   }
-
-  .fecha {
+  h3 {
     color: v.$dorado;
     font-weight: 700;
+    font-family: v.$fuente_principal;
+    margin-bottom: 0;
+    font-size: 2.6rem;
   }
 }
 

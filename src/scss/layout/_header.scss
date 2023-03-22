@@ -2,8 +2,16 @@
 @use '../base/mixins' as m;
 
 .header {
-  background: rgb(255,255,255);
+  z-index: 3;
+  width: 100%;
   background: linear-gradient(90deg, rgba(255,255,255,1) 18%, rgba(56,46,13,1) 86%);
+  @include m.tablet {
+    &.fijo {
+      position: fixed;
+      width: 100%;
+      box-shadow: .1rem .2rem .3rem v.$dorado;
+    }
+}
 
   picture { 
     img {
@@ -13,17 +21,26 @@
         padding-bottom: 0;
       }
     }
-    width: 20rem;
+    width: 10rem;
     @include m.tablet {
       margin: 0;
+      width: 20rem;
     }
   }
 
   .contenido-header {
     padding: 2rem;
+    img {
+      width: 50%;
+      margin-left: 25%;
+    }
     @include m.tablet {
       display: flex;
       justify-content: space-between;
+      img {
+        width: 90%;
+        margin-left: 0;
+      }
     }
   }
 }

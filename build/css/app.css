@@ -312,13 +312,21 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
+}
+body.fijar-body {
+  overflow: hidden;
+}
+body.body-scroll {
+  padding-top: 248.05px;
 }
 @media (min-width: 992px) {
   body {
@@ -346,8 +354,11 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0 0 5rem 0;
+  text-align: center;
 }
 
 h1 {
@@ -380,11 +391,19 @@ hr {
 }
 
 .header {
-  background: rgb(255, 255, 255);
+  z-index: 3;
+  width: 100%;
   background: linear-gradient(90deg, rgb(255, 255, 255) 18%, rgb(56, 46, 13) 86%);
 }
+@media (min-width: 768px) {
+  .header.fijo {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0.1rem 0.2rem 0.3rem #634e0b;
+  }
+}
 .header picture {
-  width: 20rem;
+  width: 10rem;
 }
 .header picture img {
   border-radius: 50%;
@@ -398,15 +417,24 @@ hr {
 @media (min-width: 768px) {
   .header picture {
     margin: 0;
+    width: 20rem;
   }
 }
 .header .contenido-header {
   padding: 2rem;
 }
+.header .contenido-header img {
+  width: 50%;
+  margin-left: 25%;
+}
 @media (min-width: 768px) {
   .header .contenido-header {
     display: flex;
     justify-content: space-between;
+  }
+  .header .contenido-header img {
+    width: 90%;
+    margin-left: 0;
   }
 }
 
@@ -437,10 +465,14 @@ hr {
 
 .video {
   position: relative;
-  max-height: 70rem;
-  min-height: 50rem;
   overflow: hidden;
-  z-index: 0;
+}
+@media (min-width: 768px) {
+  .video {
+    max-height: 70rem;
+    min-height: 50rem;
+    z-index: 0;
+  }
 }
 .video .overlay {
   position: absolute;
@@ -453,7 +485,7 @@ hr {
   justify-content: center;
 }
 .video video {
-  width: auto;
+  width: 100%;
   display: block;
 }
 @media (min-width: 768px) {
@@ -462,24 +494,11 @@ hr {
   }
 }
 
-.contenido-video {
-  text-align: center;
-  z-index: 2;
-}
-.contenido-video h2 {
-  color: #fff;
-  font-size: 7rem;
-  margin: 0;
-  justify-content: center;
-}
-.contenido-video p {
-  background-color: #6a8caf;
-  display: inline-block;
-  padding: 1rem 2rem;
-  color: #fff;
-  font-weight: 700;
-  font-size: 2.4rem;
-  margin: 0;
+.navbar-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
 }
 
 .sobre-festival {
@@ -508,9 +527,12 @@ hr {
   font-family: "Ewert", cursive;
   margin-bottom: 2rem;
 }
-.contenido-festival .fecha {
+.contenido-festival h3 {
   color: #634e0b;
   font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0;
+  font-size: 2.6rem;
 }
 
 .nombre-escenario {
@@ -536,6 +558,10 @@ hr {
 .lineup .dia {
   text-transform: uppercase;
   margin: 5rem 0;
+}
+
+#imagen-lineup {
+  height: fit-content;
 }
 
 .escenario {
@@ -651,6 +677,7 @@ span {
 }
 
 .boton-cerrar {
+  top: 64%;
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
@@ -660,25 +687,40 @@ span {
   place-items: center;
   font-weight: 700;
   position: absolute;
-  top: 80%;
+}
+@media (min-width: 768px) {
+  .boton-cerrar {
+    top: 80%;
+  }
 }
 .boton-cerrar:hover {
   cursor: pointer;
 }
 
 .formulario {
-  width: 100%;
   background-color: #60f3d3;
-  padding: 5rem 0;
+  padding: 0;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .formulario {
+    width: 100%;
+    padding: 5rem 0;
+  }
 }
 .formulario fieldset {
   display: grid;
   grid-template-columns: repeat(2, 1fr 1fr);
-  gap: 2rem;
-  margin-left: 15rem;
-  margin-right: 15rem;
+  gap: 1rem;
   border: none;
   font-size: 1.8rem;
+}
+@media (min-width: 768px) {
+  .formulario fieldset {
+    gap: 2rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+  }
 }
 @media (min-width: 1200px) {
   .formulario fieldset {
@@ -705,13 +747,19 @@ span {
   margin-top: 2rem;
 }
 .formulario fieldset button {
-  grid-column-start: 3;
-  grid-column-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
   width: 10rem;
   height: 3rem;
   border-color: #634e0b;
   border-radius: 1rem;
   font-weight: 700;
+}
+@media (min-width: 768px) {
+  .formulario fieldset button {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
 }
 .formulario fieldset button:hover {
   background-color: #634e0b;

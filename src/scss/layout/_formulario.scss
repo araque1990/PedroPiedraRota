@@ -5,36 +5,39 @@
   background-color: v.$verdeazul;
   padding: 0;
   margin: 0;
-@include m.tablet {
-  width: 100%;
-  padding: 5rem 0;
-}
+
+  @include m.tablet {
+    width: 100%;
+    padding: 5rem 0;
+  }
+
   fieldset {
     display: grid;
-    grid-template-columns:repeat(2, 1fr 1fr);
+    grid-template-columns: repeat(2, 1fr 1fr);
     gap: 1rem;
     border: none;
     font-size: 1.8rem;
+
     @include m.tablet {
       gap: 2rem;
       margin-left: 15rem;
-    margin-right: 15rem;
+      margin-right: 15rem;
     }
-  
+
     @include m.desktopXL {
       max-width: 70%;
     }
-    
+
     legend {
       text-align: center;
       margin-left: 0;
       font-weight: 700;
     }
-    
+
     label {
       grid-column-start: 1;
     }
-    
+
     input {
       grid-column-start: 2;
       grid-column-end: 5;
@@ -51,15 +54,18 @@
     button {
       grid-column-start: 2;
       grid-column-end: 3;
+
       @include m.tablet {
         grid-column-start: 3;
         grid-column-end: 4;
       }
+
       width: 10rem;
       height: 3rem;
       border-color: v.$dorado;
       border-radius: 1rem;
       font-weight: 700;
+
       &:hover {
         background-color: v.$dorado;
         color: v.$blanco;
@@ -67,5 +73,5 @@
       }
     }
   }
-  
+
 }

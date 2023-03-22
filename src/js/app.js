@@ -10,7 +10,7 @@ function iniciarGaleria() {
 function scrollNav() {
   const enlaces = document.querySelectorAll(".navegacion-principal a");
   enlaces.forEach(enlace => {
-    enlace.addEventListener("click", function(e) {
+    enlace.addEventListener("click", function (e) {
       const seccionScroll = e.target.attributes.href.value;
       const seccion = document.querySelector(seccionScroll);
       seccion.scrollIntoView();
@@ -22,9 +22,9 @@ function navegacionFija() {
   const barra = document.querySelector(".header");
   const sobreFestival = document.querySelector(".sobre-festival");
   const body = document.querySelectorAll('body');
-  
-  window.addEventListener("scroll", function() {
-    if( sobreFestival.getBoundingClientRect().bottom < 0) {
+
+  window.addEventListener("scroll", function () {
+    if (sobreFestival.getBoundingClientRect().bottom < 0) {
       barra.classList.add("fijo");
       body.classList.add("body-scroll");
     } else {
@@ -64,7 +64,7 @@ function mostrarImagen(id) {
   const overlay = document.createElement("div");
   overlay.appendChild(imagen);
   overlay.classList.add("overlay");
-  overlay.onclick = function() {
+  overlay.onclick = function () {
     const body = document.querySelector("body");
 
   }

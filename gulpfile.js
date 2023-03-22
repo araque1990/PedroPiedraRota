@@ -1,19 +1,30 @@
 const { src, dest, watch, parallel} = require("gulp");
 
 // Dependencias de CSS
-const sass = require("gulp-sass")(require("sass"));
-const plumber = require("gulp-plumber");
+const sass = require("gulp-sass")(require("sass")); // permite dar mas potencia y funcionalidad a css, ademas de compilar todo el codigo css en un solo archivo
+const plumber = require("gulp-plumber"); // ejecuta codigo linea a linea con .pipe
+const autoprefixer = require("autoprefixer"); // ayuda a dar soporte a navegadores que no soporten algunas caracteristicas de css
+const cssnano = require("cssnano"); // comprime el codigo css
+const postcss = require("gulp-postcss"); // realiza algunas transformaciones al codigo por medio de cssnano y autoprefixer
+const sourcemap = require("gulp-sourcemaps"); // me ayuda a ubicar el archivo scss cuando quiero hacer alguna modificación visible en el navegador que es quien lo entiende
 
-//Dependencias de Imagenes
+// Dependencias de Imagenes
 const cache = require("gulp-cache");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const avif = require("gulp-avif");
 
+// Dependencias de JavaScript
+const terser = require("gulp-terser-js");
+
+
 function css(callback) {
   src("src/scss/**/*.scss")
+  .pipe(sourcemap.init())
   .pipe(plumber())
     .pipe(sass())
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(sourcemap.write("."))
     .pipe(dest('build/css'))
 
   callback();
@@ -52,6 +63,9 @@ function versionAvif(callback) {
 
 function javascript(callback) {
   src('src/js/**/*.js')
+  .pipe(sourcemap.init())
+  .pipe(terser())
+  .pipe(sourcemap.write("."))
   .pipe(dest('build/js'));
   
   callback();

@@ -14,6 +14,7 @@
   h3 {
     text-shadow: 0.1rem 0.1rem 0.2rem v.$amarillo;
   }
+
   .dia {
     text-transform: uppercase;
     margin: 5rem 0;
@@ -56,21 +57,23 @@
   }
 }
 
-.show .nombre-escenario:after{
+.show .nombre-escenario:after {
   background-image: url(../../../build/img/icono_show.svg);
   background-size: contain;
 }
 
-.rock .nombre-escenario:after{
+.rock .nombre-escenario:after {
   background-image: url(../../../build/img/icono_rock.png);
   background-size: contain;
 }
 
 .calendario {
   @include m.resetear-lista;
+
   li {
     padding: 2.5rem;
     font-weight: 700;
+
     span {
       font-weight: 400;
     }

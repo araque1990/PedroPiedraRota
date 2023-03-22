@@ -7,19 +7,24 @@
   display: flex;
   justify-content: space-between;
   margin: 0;
-  p, a {
+
+  p,
+  a {
     margin: 0;
     font-size: 1.4rem;
     color: v.$blanco;
   }
-  a{ 
+
+  a {
     text-decoration: underline;
   }
+
   .site-footer--Piedra {
     padding-left: 5%;
+
     @include m.tablet {
       padding-left: 10%;
       margin-left: 5%rem;
     }
-    }
+  }
 }

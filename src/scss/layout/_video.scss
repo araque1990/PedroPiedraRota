@@ -4,31 +4,33 @@
 .video {
   position: relative;
   overflow: hidden;
- @include m.tablet {
- max-height: 70rem;
- min-height: 50rem;
- 
- z-index: 0;
- }
 
- .overlay {
-  position: absolute;
-  background: rgb(3,15,255);
-  background: linear-gradient(270deg, rgba(3,15,255,0.5) 0%, rgba(181,0,0,0.6676410381610577) 54%);
-  display: flex;
-  height: 100%;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
- }
-
- video {
-  width: 100%;
-  display: block;
   @include m.tablet {
-    width: 100%;
+    max-height: 70rem;
+    min-height: 50rem;
+
+    z-index: 0;
   }
- }
+
+  .overlay {
+    position: absolute;
+    background: rgb(3, 15, 255);
+    background: linear-gradient(270deg, rgba(3, 15, 255, 0.5) 0%, rgba(181, 0, 0, 0.6676410381610577) 54%);
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  video {
+    width: 100%;
+    display: block;
+
+    @include m.tablet {
+      width: 100%;
+    }
+  }
 }
 
 .navbar-fixed {

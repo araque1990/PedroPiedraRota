@@ -19,3 +19,5 @@ Instalo una version especifica del paquete gulp-imagemin concretamente la 7.1.0 
 adicionalmente instalo el paquete gulp-cache, ya que el procesamiento de las imagenes con imagemin va a requerir tenerlas en caché
 creo la tarea de minimizar imagenes exitosamente
 instalo el paquete gulp-avif que es otro formato de imagenes muy reciente para tenerla como opcion de imagenes minificadas, a veces pesan menos que los generados con webp con el inconveniente que en este momento aun no lo soportan todos los navegadores
+Una vez terminada la parte frontend del proyecto procedo a minificar el codigo, instalo las librerias de npm cssnano autoprefixer postcss y gulp-postcss
+Instalo el paquete gulp-terser-js, que me ayuda a comprimir el archivo javaScript 

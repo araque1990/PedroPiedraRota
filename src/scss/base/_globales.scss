@@ -2,83 +2,86 @@
 @use "../base/mixins" as m;
 
 html {
- font-size: 62.5%;
- box-sizing: border-box;
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
- box-sizing: inherit;
+  box-sizing: inherit;
 }
+
 body {
- font-family: v.$fuente_principal;
- font-size: 1.6rem;
+  font-family: v.$fuente_principal;
+  font-size: 1.6rem;
 
- &.fijar-body {
-  overflow: hidden;
- }
- &.body-scroll {
-  padding-top: 248.05px;
- }
- @include m.desktop {
-  width: 90%;
-  margin-left: 5%;
- }
+  &.fijar-body {
+    overflow: hidden;
+  }
 
- &.fijar-body {
-  overflow: hidden;
- }
+  &.body-scroll {
+    padding-top: 248.05px;
+  }
+
+  @include m.desktop {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  &.fijar-body {
+    overflow: hidden;
+  }
 }
 
 p {
- font-size: 2rem;
- color: v.$negro;
- line-height: 1.5;
+  font-size: 2rem;
+  color: v.$negro;
+  line-height: 1.5;
 }
 
 .contenedor {
- width: 95%;
- max-width: 120rem;
- margin: 0 auto;
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
 a {
- text-decoration: none;
+  text-decoration: none;
 }
 
 h1,
 h2,
 h3 {
- margin: 0 0 5rem 0;
- text-align: center;
+  margin: 0 0 5rem 0;
+  text-align: center;
 }
 
 h1 {
- font-size: 4rem;
+  font-size: 4rem;
 }
 
 h2 {
- font-size: 3.6rem;
+  font-size: 3.6rem;
 }
 
 h3 {
- font-size: 3rem;
- text-align: center;
- color: v.$dorado;
- font-family: v.$fuente_secundaria;
+  font-size: 3rem;
+  text-align: center;
+  color: v.$dorado;
+  font-family: v.$fuente_secundaria;
 }
 
 img {
- max-width: 100%;
- width: 100%;
- height: auto;
- display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 hr {
- max-width: 75%;
- color: v.$dorado;
- margin: 5rem auto;
- opacity: 0.5;
+  max-width: 75%;
+  color: v.$dorado;
+  margin: 5rem auto;
+  opacity: 0.5;
 }

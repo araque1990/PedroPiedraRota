@@ -40,13 +40,6 @@ function imagenes(callback) {
   callback();
 }
 
-function html(callback) {
-  src("./**/*.html")
-  .pipe(dest("build"))
-  callback();
-}
-
-
 function versionWebp(callback) {
   const opciones = {
     quality: 50
@@ -111,4 +104,4 @@ exports.js = javascript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel(html,imagenes,svg,versionWebp,versionAvif,javascript,video,audio,dev);
+exports.dev = parallel(imagenes,svg,versionWebp,versionAvif,javascript,video,audio,dev);

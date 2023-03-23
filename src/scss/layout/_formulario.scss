@@ -5,6 +5,9 @@
   background-color: v.$verdeazul;
   padding: 0;
   margin: 0;
+  h3 {
+    padding-top: 2rem;
+  }
 
   @include m.tablet {
     width: 100%;

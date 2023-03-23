@@ -1,2 +1,8 @@
 node_modules
 .history
+src
+._.DS_Store
+._img
+._video
+package.json
+package-lock.json

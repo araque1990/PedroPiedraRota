@@ -4,37 +4,51 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function iniciarGaleria() {
   crearGaleria();
-  scrollNav();
+  crearCarteles();
 }
+function crearCarteles() {
+  const galeria = document.querySelector(".galeria-carteles");
 
-function scrollNav() {
-  const enlaces = document.querySelectorAll(".navegacion-principal a");
-  enlaces.forEach(enlace => {
-    enlace.addEventListener("click", function (e) {
-      const seccionScroll = e.target.attributes.href.value;
-      const seccion = document.querySelector(seccionScroll);
-      seccion.scrollIntoView();
-    })
-  });
-}
-
-function navegacionFija() {
-  const barra = document.querySelector(".header");
-  const sobreFestival = document.querySelector(".sobre-festival");
-  const body = document.querySelectorAll('body');
-
-  window.addEventListener("scroll", function () {
-    if (sobreFestival.getBoundingClientRect().bottom < 0) {
-      barra.classList.add("fijo");
-      body.classList.add("body-scroll");
-    } else {
-      barra.classList.remove("fijo");
-      body.classList.remove("body-scroll");
+  for (let i = 1; i <= 9; i++) {
+    const imagen = document.createElement("picture");
+    imagen.innerHTML = `
+    <source srcset="build/img/carteles/${i}.avif" type="image/avif">
+    <source srcset="build/img/carteles/${i}.webp" type="image/webp">
+    <img loading="lazy" width="200" height="300" src="build/img/carteles/${i}.jpg" alt="imagen galeria">
+    `;
+    imagen.onclick = function () {
+      mostrarCartel(i);
     }
-  })
+    galeria.appendChild(imagen);
+  }
+}
+
+function mostrarCartel(id) {
+  const imagen = document.createElement("picture");
+  imagen.innerHTML = `
+    <source srcset="build/img/carteles/${id}.avif" type="image/avif">
+    <source srcset="build/img/carteles/${id}.webp" type="image/webp">
+    <img loading="lazy" width="200" height="300" src="build/img/carteles/${id}.jpg" alt="imagen galeria">
+    `;
+
+  // Crea el overlay con la imagen
+  const overlay = document.createElement("div");
+  overlay.appendChild(imagen);
+  overlay.classList.add("overlay");
+  overlay.onclick = function() {
+    const body = document.querySelector("body");
+    body.classList.remove("fijar-body");
+    overlay.remove();
+  }
+
+  //Añadirlo al HTML
+  const body = document.querySelector("body");
+  body.appendChild(overlay);
+  body.classList.add("fijar-body");
 }
 
 
+//-------------------------------------------------------------
 function crearGaleria() {
   const galeria = document.querySelector(".galeria-imagenes");
 

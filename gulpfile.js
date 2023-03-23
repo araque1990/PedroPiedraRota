@@ -34,7 +34,7 @@ function imagenes(callback) {
   const opciones = {
     optimizationLevel: 3
   };
-  src('src/img/**/*.{png,jpg}')
+  src('src/img/**/*.{png,jpg,jpeg}')
   .pipe(cache(imagemin(opciones)))
   .pipe(dest('build/img'))
   callback();
@@ -44,7 +44,7 @@ function versionWebp(callback) {
   const opciones = {
     quality: 50
   };
-  src('src/img/**/*.{png,jpg}')
+  src('src/img/**/*.{png,jpg,jpeg}')
   .pipe(webp(opciones))
   .pipe(dest('build/img'))
   callback();
@@ -54,7 +54,7 @@ function versionAvif(callback) {
   const opciones = {
     quality: 50
   };
-  src('src/img/**/*.{png,jpg}')
+  src('src/img/**/*.{png,jpg,jpeg}')
   .pipe(avif(opciones))
   .pipe(dest('build/img'))
   callback();

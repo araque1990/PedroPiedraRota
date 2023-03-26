@@ -14,17 +14,21 @@
     }
   }
 
-  picture {
-    img {
-      border-radius: 50%;
-      padding-bottom: 2rem;
-
-      @include m.tablet {
-        padding-bottom: 0;
+  .contenido-header {
+    picture {
+      
+      img {
+        border-radius: 50%;
+        padding-bottom: 2rem;
+        width:0;
+        @include m.tablet {
+          padding-bottom: 0;
+          width: 10rem;
+        }
       }
-    }
+  }
 
-    width: 10rem;
+    
 
     @include m.tablet {
       margin: 0;

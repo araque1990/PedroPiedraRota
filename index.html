@@ -140,13 +140,17 @@
     <h3>Contacto</h3>
     <fieldset>
       <legend>Si quieres contactarme puedes dejar aquí tus datos</legend>
-      <label for="nombre" class="nombre">Nombre: </label>
+      <label for="nombre">Nombre</label>
       <input type="text" name="nombre" id="nombre" class="nombre" required>
-      <label for="telefono">Telefono: </label>
+      <label for="apellido">Apellido</label>
+      <input type="text" name="apellido" id="apellido" required>
+      <label for="telefono">Telefono</label>
       <input type="tel" name="telefono" id="telefono" required>
-      <label for="email">Correo Electronico: </label>
+      <label for="email">Correo Electronico</label>
       <input type="email" required>
-      <button type="submit">Enviar</button>
+      <div class="button">
+        <button type="submit">Enviar</button>
+      </div>
     </fieldset>
 
     </form>

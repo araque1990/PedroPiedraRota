@@ -24,7 +24,9 @@
 .galeria-carteles {
   @include m.resetear-lista;
   @include m.grid(1, 1rem);
-  
+  @include m.telefono {
+    @include m.grid(2, 1rem);
+  }
   @include m.tablet {
     @include m.grid(3, 2rem);
   }

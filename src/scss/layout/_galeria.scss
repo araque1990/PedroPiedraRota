@@ -79,9 +79,9 @@
 
 .galeria-carteles {
   img {
-    max-height: 50%;
+    max-height: 100%;
     width: auto;
-    max-width: 98%;
+    max-width: 100%;
     margin-left: 1%;
     
     @include m.tablet {

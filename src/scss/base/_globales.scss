@@ -15,23 +15,13 @@ html {
 body {
   font-family: v.$fuente_principal;
   font-size: 1.6rem;
+  width: 90%;
+  margin-left: 5%;
 
   &.fijar-body {
     overflow: hidden;
   }
 
-  &.body-scroll {
-    padding-top: 248.05px;
-  }
-
-  @include m.desktop {
-    width: 90%;
-    margin-left: 5%;
-  }
-
-  &.fijar-body {
-    overflow: hidden;
-  }
 }
 
 p {
@@ -41,8 +31,6 @@ p {
 }
 
 .contenedor {
-  width: 95%;
-  max-width: 120rem;
   margin: 0 auto;
 }
 
@@ -77,11 +65,4 @@ img {
   width: 100%;
   height: auto;
   display: block;
-}
-
-hr {
-  max-width: 75%;
-  color: v.$dorado;
-  margin: 5rem auto;
-  opacity: 0.5;
 }

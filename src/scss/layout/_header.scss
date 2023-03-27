@@ -16,7 +16,10 @@
 
   .contenido-header {
     picture {
-      
+      @include m.tablet {
+        display: ruby;
+        margin-right: 3rem;
+      }
       img {
         border-radius: 50%;
         padding-bottom: 2rem;
@@ -24,6 +27,7 @@
         @include m.tablet {
           padding-bottom: 0;
           width: 10rem;
+          
         }
       }
   }

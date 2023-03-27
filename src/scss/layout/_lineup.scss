@@ -3,7 +3,7 @@
 
 .lineup {
   background-color: v.$verdeazul;
-  padding: 5rem 0;
+  padding: 5rem 2.5rem;
 
   p {
     text-align: center;
@@ -15,7 +15,7 @@
     text-shadow: 0.1rem 0.1rem 0.2rem v.$amarillo;
   }
 
-  .dia {
+  .musica--eventos {
     text-transform: uppercase;
     margin: 5rem 0;
   }
@@ -23,6 +23,7 @@
 
 #imagen-lineup {
   height: max-content;
+  padding-top: 0;
 }
 
 .escenario {
@@ -36,7 +37,12 @@
 
 .escenarios-contenedor {
   @include m.tablet {
-    @include m.grid(2, 5rem);
+    @include m.grid(2, 2.5rem);
+  }
+
+  img {
+    height: 100%;
+    max-height: 100%;
   }
 
   p {
@@ -57,17 +63,17 @@
   }
 }
 
-.show .nombre-escenario:after {
+.show .ultimos--hits:after {
   background-image: url(../../../build/img/icono_show.svg);
   background-size: contain;
 }
 
-.rock .nombre-escenario:after {
+.rock .ultimos--hits:after {
   background-image: url(../../../build/img/icono_rock.png);
   background-size: contain;
 }
 
-.calendario {
+.hits {
   @include m.resetear-lista;
 
   li {
@@ -82,8 +88,10 @@
 
 audio {
   padding-top: 2rem;
+  max-width: 100%;
 }
 
 span {
   display: block;
 }
+

@@ -8,7 +8,7 @@
   @include m.tablet {
     max-height: 70rem;
     min-height: 50rem;
-
+    
     z-index: 0;
   }
 
@@ -21,13 +21,25 @@
     width: 100%;
     flex-direction: column;
     justify-content: center;
+    @include m.tablet {
+      height: 96%;
+      max-height: 100%;
+    }
+    @include m.desktop {
+      height: 100%;
+    }
   }
 
   video {
     width: 100%;
     display: block;
-
+    height: 100%;
+    max-height: 100%;
     @include m.tablet {
+      width: auto;
+      max-height: max-content;
+    }
+    @include m.desktop {
       width: 100%;
     }
   }

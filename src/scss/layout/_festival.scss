@@ -1,7 +1,7 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-.sobre-festival {
+.contenedor--show {
   padding: 5rem 0;
 
   @include m.tablet {
@@ -10,7 +10,7 @@
 
 }
 
-.contenido-festival {
+.contenido-show {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,12 +32,4 @@
     margin-bottom: 0;
     font-size: 2.6rem;
   }
-}
-
-.nombre-escenario {
-  font-family: v.$fuente_secundaria;
-}
-
-#imagen-lineup {
-  padding-top: 0;
 }
